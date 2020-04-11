@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.header-title {
+
+}
+
+.header-button {
+  border: none;
+  background: none;
+  font-family: 'batfont';
+  font-size: 20px;
+  width: 300px;
+  background-color: black;
+  color: white;
+  height: 50px;
+}

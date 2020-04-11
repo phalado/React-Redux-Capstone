@@ -1,7 +1,10 @@
 const filter = (state = 'Justice League', action) => {
   switch (action.type) {
     case 'CHANGE_FILTER':
-      return action.filter;
+      return {
+        ...state,
+        value: action.filter,
+      };
     default:
       return state;
   }

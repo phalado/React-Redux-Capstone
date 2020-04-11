@@ -1,0 +1,18 @@
+.filtering {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.filter-value {
+  border: none;
+  background: none;
+  font-family: 'batfont';
+  font-size: 15px;
+  width: 200px;
+  background-color: black;
+  color: white;
+  height: 50px;
+  border-radius: 5px;
+  margin: 10px;
+}

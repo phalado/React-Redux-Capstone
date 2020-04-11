@@ -15,4 +15,9 @@ const changeFilter = filter => ({
   filter,
 });
 
-export { addHero, changeFilter };
+const chngRender = render => ({
+  type: 'CHANGE_RENDER',
+  render,
+});
+
+export { addHero, changeFilter, chngRender };

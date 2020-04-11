@@ -1,0 +1,21 @@
+.hero-image {
+  width: 150px;
+}
+
+.hero-name {
+  width: 150px;
+  margin: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-container {
+  margin: 0 20px;
+}
+
+.hero-button {
+  border: none;
+  background: none;
+}

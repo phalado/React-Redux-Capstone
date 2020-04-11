@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+
+.app-title {
+  margin-top: 10vh;
+  font-size: 4rem;
+}
+
+.app-button {
+  background-color: black;
+  color: white;
+  width: 30%;
+  height: 25%;
+  font-size: 50px;
+  font-family: 'batfont';
+  margin-top: 10vh;
+}

@@ -2,12 +2,49 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import App from './App';
+import App from './containers/App';
 import rootReducer from './reducers';
+import './index.css';
 
 const initialState = {
   heroes: [],
-  filter: 'Justice League',
+  filter: {
+    value: [0, 'Justice League'],
+    type: [
+      'filiation',
+      'alignment',
+      'name',
+    ],
+    filiation: [
+      'Justice League',
+      'Justice League of America',
+      'Green Lantern Corps',
+      'Flash Family',
+      'Teen Titans',
+      'Injustice League',
+      'Justice League Dark',
+      'Legion of Doom',
+      'Suicide Squad',
+      'Secret Society os Super Vilains',
+      'Legion of Super Heroes',
+      'Birds of Prey',
+      'Justice Society of America',
+      'Batman Family',
+      'Outsiders',
+      'Sinestro Corps',
+      'Justice League Elite',
+      'Young Justice',
+      'League of Assassins',
+      'Batman Incorporated',
+      'Justice League Unlimited',
+    ],
+    alignment: [
+      'good',
+      'bad',
+      'neutral',
+    ],
+  },
+  render: 'init',
 };
 
 const store = createStore(
