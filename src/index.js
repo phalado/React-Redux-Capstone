@@ -9,7 +9,7 @@ import './index.css';
 const initialState = {
   heroes: [],
   filter: {
-    value: [0, 'Justice League'],
+    value: [0, 'Justice League of America'],
     type: [
       'filiation',
       'alignment',
@@ -30,7 +30,7 @@ const initialState = {
       'Batman Family',
       'Outsiders',
       'Sinestro Corps',
-      'Justice League Elite',
+      'Watchmen',
       'Young Justice',
       'League of Assassins',
       'Batman Incorporated',

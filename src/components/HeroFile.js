@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../containers/Header';
+import HeroRadar from './HeroRadar';
 import './HeroFile.css';
 
 const HeroFile = props => {
@@ -47,33 +48,11 @@ const HeroFile = props => {
             })}
           </ul>
         </div>
-        <div className="hero-chart">
-          <ul>
-            <li>
-              intelligence:
-              {chart.intelligence}
-            </li>
-            <li>
-              strength:
-              {chart.strength}
-            </li>
-            <li>
-              speed:
-              {chart.speed}
-            </li>
-            <li>
-              durability:
-              {chart.durability}
-            </li>
-            <li>
-              power:
-              {chart.power}
-            </li>
-            <li>
-              combat:
-              {chart.combat}
-            </li>
-          </ul>
+        <div id="powerstats">
+          <HeroRadar
+            chart={chart}
+            size={400}
+          />
         </div>
       </div>
     </div>

@@ -19,3 +19,12 @@ button {
 .hero-img {
   height: 80%;
 }
+
+.axis {
+  stroke: 0.3;
+}
+
+.scale {
+  stroke: black;
+  stroke-width: 0.3;
+}
