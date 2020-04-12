@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 import './TeamsList.css';
 
 const TeamsList = props => {
-  const { chngFilter, changeRender, filter } = props;
+  const {
+    chngFilter, changeRender, filter, heroes,
+  } = props;
 
-  const handleClick = value => {
+  const handleClick = (value, render) => {
     chngFilter(value);
-    changeRender('heroesList');
+    changeRender(render);
   };
 
   return (
@@ -19,7 +21,7 @@ const TeamsList = props => {
             key={value}
             type="button"
             className="filter-value"
-            onClick={() => handleClick([1, value])}
+            onClick={() => handleClick([1, value], 'heroesList')}
           >
             {value}
           </button>
@@ -32,9 +34,22 @@ const TeamsList = props => {
             key={value}
             type="button"
             className="filter-value"
-            onClick={() => handleClick([0, value])}
+            onClick={() => handleClick([0, value], 'heroesList')}
           >
             {value}
+          </button>
+        ))}
+      </div>
+      <h1>Choose a subject by name:</h1>
+      <div className="filtering">
+        {heroes.map(hero => (
+          <button
+            key={hero.id}
+            type="button"
+            className="filter-value"
+            onClick={() => handleClick([2, hero.id], 'heroFile')}
+          >
+            {hero.name}
           </button>
         ))}
       </div>
@@ -45,8 +60,12 @@ const TeamsList = props => {
 TeamsList.propTypes = {
   chngFilter: PropTypes.func.isRequired,
   changeRender: PropTypes.func.isRequired,
+  heroes: PropTypes.arrayOf(PropTypes.object).isRequired,
   filter: PropTypes.shape({
-    value: PropTypes.arrayOf(PropTypes.string),
+    value: PropTypes.arrayOf(PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ])),
     filiation: PropTypes.arrayOf(PropTypes.string),
     alignment: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,

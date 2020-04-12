@@ -25,8 +25,6 @@ const initialState = {
       'Justice League Dark',
       'Legion of Doom',
       'Suicide Squad',
-      'Secret Society os Super Vilains',
-      'Legion of Super Heroes',
       'Birds of Prey',
       'Justice Society of America',
       'Batman Family',
@@ -37,6 +35,8 @@ const initialState = {
       'League of Assassins',
       'Batman Incorporated',
       'Justice League Unlimited',
+      'Team Arrow',
+      'Justice League International',
     ],
     alignment: [
       'good',

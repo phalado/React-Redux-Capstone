@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './App.css';
 import HeroesList from '../containers/HeroesList';
+import HeroFile from './HeroFile';
+// eslint-disable-next-line import/extensions
 import TeamsList from '../containers/TeamsList.js';
 
 class App extends React.Component {
@@ -9,6 +11,7 @@ class App extends React.Component {
     super(props);
     this.handleAddHero = this.handleAddHero.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.clickHandler = this.clickHandler.bind(this);
     this.state = {
       heroes: [],
     };
@@ -33,13 +36,17 @@ class App extends React.Component {
     heroes.forEach(hero => {
       addNewHero(hero);
     });
-    console.log('appHeroes', this.props);
   }
 
   handleClick() {
     const { changeRender } = this.props;
     changeRender('heroesList');
-    console.log(this.props);
+  }
+
+  clickHandler(value, render) {
+    const { chngFilter, changeRender } = this.props;
+    chngFilter(value);
+    changeRender(render);
   }
 
   render() {
@@ -78,6 +85,19 @@ class App extends React.Component {
       );
     }
 
+    if (render === 'heroFile') {
+      const { heroes, filter } = this.props;
+      return (
+        <div className="App">
+          <HeroFile
+            hero={heroes.filter(hero => hero.id === filter.value[1])[0]}
+            filter={filter}
+            handleClick={this.clickHandler}
+          />
+        </div>
+      );
+    }
+
     return null;
   }
 }
@@ -85,7 +105,15 @@ class App extends React.Component {
 App.propTypes = {
   addNewHero: PropTypes.func.isRequired,
   changeRender: PropTypes.func.isRequired,
+  chngFilter: PropTypes.func.isRequired,
   render: PropTypes.string.isRequired,
+  heroes: PropTypes.arrayOf(PropTypes.object).isRequired,
+  filter: PropTypes.shape({
+    value: PropTypes.arrayOf(PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ])),
+  }).isRequired,
 };
 
 export default App;

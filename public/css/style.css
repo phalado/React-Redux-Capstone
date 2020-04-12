@@ -21,3 +21,8 @@ body {
   border-radius: 20px;
   border: ridge;
 }
+
+#root {
+  max-height: 100%;
+  overflow-y: scroll;
+}

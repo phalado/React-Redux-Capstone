@@ -20,7 +20,10 @@ const Header = props => {
 Header.propTypes = {
   changeRender: PropTypes.func.isRequired,
   filter: PropTypes.shape({
-    value: PropTypes.arrayOf(PropTypes.string),
+    value: PropTypes.arrayOf(PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ])),
   }).isRequired,
 };
 
