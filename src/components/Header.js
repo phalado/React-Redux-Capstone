@@ -12,7 +12,13 @@ const Header = props => {
   return (
     <header className="header">
       <h1 className="header-title">{filter.value[1]}</h1>
-      <button type="button" className="header-button" onClick={handleClick}>Click here to change filter</button>
+      <button
+        type="button"
+        className="header-button"
+        onClick={handleClick}
+      >
+        Click here to change filter
+      </button>
     </header>
   );
 };

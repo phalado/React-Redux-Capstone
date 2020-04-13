@@ -1,68 +1,126 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React and Redux Capstone Project: Catalogue os Statistics
 
-## Available Scripts
+<h1 align="center"><img src="https://raw.githubusercontent.com/phalado/React-Redux-Capstone/catalogue/public/content/welcome.png"></h1>
 
-In the project directory, you can run:
+This is Microverse's final project in React/Redux's course.
 
-### `yarn start`
+In this project, I build a catalogue of DC Comic's main characters using React and Redux.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Table of contents
 
-### `yarn test`
+-[React and Redux Capstone Project: Catalogue os Statistics](#react-and-redux-capstone-project-catalogue-os-statistics)
+  - [Table of contents](#table-of-contents)
+  - [About](#about)
+  - [The catalogue](#the-catalogue)
+    - [How to open](#how-to-open)
+    - [Technologies used](#technologies-used)
+  - [Video presentation](#video-presentation)
+  - [Contact](#contact)
+  - [Acknowledgements](#acknowledgements)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## About
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project's objective was to build a browsable list of items that you can filter and access to the details of one item. The list should be accessed from an API, so I choose the [Superhero API][superhero-API] and filtered it to store only the DC Comic's characters.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+The project's assignment can be seen [here][assignment].
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Link to a live version [here][live-version].
 
-### `yarn eject`
+Repository: https://github.com/phalado/React-Redux-Capstone
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## The catalogue
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+For this project I hacked Batman's computer and got some data from the main heroes and villains - you can't be the Batman if you are not prepared for each hero or villain. For my bad luck, after [the Tower of Babel][tower-of-babel] the bat made it difficult to get data, so I wasn't able to get the character's powers and weaknesses, but I was able to get their name, identity, filiations, a photo and some stats that I converted to a power chart using [React SVG Radar Chart][react-radar-chart].
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To hide myself from the world's greatest detective I had to use a fake server to store the data. Whe you open the catalogue the React APP downloads the data from the server using an API and stores it in the Redux store.
 
-## Learn More
+The first page showed is just an introdutory page.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![init-screen][init-screen]
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+When you click the button will be rendered the Justice League of America's filtered page, showing it's heros. It's an example of the characters filtered by filiation.
 
-### Code Splitting
+![team-screen][team-screen]
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+ You can click in the hero to see its data. Interesting pointing that, if you click in a filiation in blue the will be rendered that team's members.
 
-### Analyzing the Bundle Size
+![hero-screen][hero-screen]
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Finally, you can click in the button in the header to see the possible filters, beeing possible to filter by alignment - good, bad or neutral - by several teams of heroes or villains or, if you prefer, click in the name of any character to see its data.
 
-### Making a Progressive Web App
+![filter-screen][filter-screen]
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
+### How to open
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+You can open the catalogue online clicking [here][live-version] or locally following these steps:
 
-### Deployment
+* Click on the green button "Clone or Download"
+* Click on Download ZIP
+* Extract the project
+* In your terminal, navigate to the game's folder
+* Run *npm install*
+* Run *npm start*
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+A tab will be opened in the browser.
 
-### `yarn build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Technologies used
+
+To create this project I used:
+
+* JavaScript
+* A bit of HTML and CSS
+* Eslint
+* React
+* Redux
+* PropTypes
+* [Superhero API][superhero-API]
+* [React SVG Radar Chart][react-radar-chart]
+* Github
+* Heroku
+
+## Video presentation
+
+*Coming soon*
+
+
+## Contact
+
+Author: Raphael Cordeiro
+
+Follow me on [twitter][rapha-twitter],  visit my [Github portfolio][rapha-github], my [Linkedin][rapha-linkedin] or my [personal portfolio][rapha-personal].
+
+
+## Acknowledgements
+
+[Microverse][mcvs]
+
+I have no business rights about the characters used in this catalogue. This is only for learning purposes. All character belong to [DC Comics][https://www.dccomics.com/].
+
+
+
+
+<!-- Links -->
+[assignment]: https://www.notion.so/Catalogue-of-Statistics-72446e7fa33c403a9b6a0bc1de5c6cf5
+[live-version]: https://batcomputer-copy.herokuapp.com/
+[superhero-API]: https://www.superheroapi.com/
+[tower-of-babel]: https://dc.fandom.com/wiki/JLA:_Tower_of_Babel
+[react-radar-chart]: https://www.npmjs.com/package/react-svg-radar-chart
+[mcvs]: https://www.microverse.org/
+[rapha-github]: https://github.com/phalado
+[rapha-twitter]: https://twitter.com/phalado
+[rapha-linkedin]: https://www.linkedin.com/in/raphael-cordeiro/
+[rapha-personal]: https://phalado.github.io/
+
+<!-- Images -->
+[init-screen]: https://raw.githubusercontent.com/phalado/React-Redux-Capstone/catalogue/public/content/init-screen.png
+[team-screen]: https://raw.githubusercontent.com/phalado/React-Redux-Capstone/catalogue/public/content/team-screen.png
+[filter-screen]: https://raw.githubusercontent.com/phalado/React-Redux-Capstone/catalogue/public/content/filter-screen.png
+[hero-screen]: https://raw.githubusercontent.com/phalado/React-Redux-Capstone/catalogue/public/content/hero-screen.png
+
+<!-- Video -->
+[video]: https://www.loom.com/share/50085eb2e29b42129edaa0ce6d59d191

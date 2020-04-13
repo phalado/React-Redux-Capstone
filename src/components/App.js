@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './App.css';
 import HeroesList from '../containers/HeroesList';
 import HeroFile from './HeroFile';
 import TeamsList from '../containers/TeamsList';
+import './App.css';
 
 class App extends React.Component {
   constructor(props) {

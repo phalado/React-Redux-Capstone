@@ -13,7 +13,11 @@ const Hero = props => {
   return (
     <div className="hero-container">
       <h2 className="hero-name">{name}</h2>
-      <button className="hero-button" type="button" onClick={() => clickHandler([2, id], 'heroFile')}>
+      <button
+        className="hero-button"
+        type="button"
+        onClick={() => clickHandler([2, id], 'heroFile')}
+      >
         <img src={image} alt={name} className="hero-image" />
       </button>
     </div>
