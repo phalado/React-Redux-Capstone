@@ -41,12 +41,12 @@ const HeroRadar = props => {
 HeroRadar.propTypes = {
   size: PropTypes.number.isRequired,
   chart: PropTypes.shape({
-    intelligence: PropTypes.number,
-    strength: PropTypes.number,
-    speed: PropTypes.number,
-    durability: PropTypes.number,
-    power: PropTypes.number,
-    combat: PropTypes.number,
+    intelligence: PropTypes.string,
+    strength: PropTypes.string,
+    speed: PropTypes.string,
+    durability: PropTypes.string,
+    power: PropTypes.string,
+    combat: PropTypes.string,
   }).isRequired,
 };
 

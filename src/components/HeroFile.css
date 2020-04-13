@@ -1,11 +1,12 @@
 ul {
   list-style: none;
+  padding: 0;
 }
 
 button {
   border: none;
   font-family: 'batfont';
-  font-size: 16px;
+  font-size: 1.5rem;
   background: none;
   color: blue;
   cursor: pointer;
@@ -14,10 +15,17 @@ button {
 .hero-file-container {
   display: flex;
   justify-content: space-around;
+  font-size: 1.5rem;
+}
+
+.hero-img-container,
+.hero-data,
+.hero-chart {
+  width: 30%;
 }
 
 .hero-img {
-  height: 80%;
+  width: 100%;
 }
 
 .axis {
@@ -27,4 +35,20 @@ button {
 .scale {
   stroke: black;
   stroke-width: 0.3;
+}
+
+@media (max-width: 800px) {
+  .hero-file-container {
+    flex-wrap: wrap;
+    font-size: 2rem;
+  }
+
+  .hero-img-container,
+  .hero-data {
+    width: 45%;
+  }
+
+  .hero-chart {
+    width: 100%
+  }
 }

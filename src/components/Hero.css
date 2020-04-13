@@ -1,21 +1,35 @@
 .hero-image {
-  width: 150px;
+  width: 9.375rem;
+  height: 12.5rem;
 }
 
 .hero-name {
-  width: 150px;
+  width: 9.375rem;
+  height: 3.125rem;
   margin: 0;
-  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .hero-container {
-  margin: 0 20px;
+  margin: 0 1.25rem;
 }
 
 .hero-button {
   border: none;
   background: none;
+}
+
+@media (max-width: 800px) {
+  .hero-image {
+    width: 15rem;
+    height: 20rem;
+  }
+
+  .hero-name {
+    width: 15rem;
+    height: 5rem;
+    font-size: 2rem;
+  }
 }

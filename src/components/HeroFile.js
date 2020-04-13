@@ -48,7 +48,7 @@ const HeroFile = props => {
             })}
           </ul>
         </div>
-        <div id="powerstats">
+        <div id="powerstats" className="hero-chart">
           <HeroRadar
             chart={chart}
             size={400}

@@ -33,7 +33,7 @@ const initialState = {
       'Watchmen',
       'Young Justice',
       'League of Assassins',
-      'Batman Incorporated',
+      'Legion of Super-Heroes',
       'Justice League Unlimited',
       'Team Arrow',
       'Justice League International',

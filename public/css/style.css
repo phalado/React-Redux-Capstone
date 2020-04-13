@@ -22,7 +22,26 @@ body {
   border: ridge;
 }
 
-#root {
-  max-height: 100%;
-  overflow-y: scroll;
+@media (max-width: 1500px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1300px) {
+  :root {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 1000px) {
+  :root {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 800px) {
+  :root {
+    font-size: 7px;
+  }
 }
