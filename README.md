@@ -9,7 +9,7 @@ In this project, I build a catalogue of DC Comic's main characters using React a
 
 ## Table of contents
 
--[React and Redux Capstone Project: Catalogue os Statistics](#react-and-redux-capstone-project-catalogue-os-statistics)
+- [React and Redux Capstone Project: Catalogue os Statistics](#react-and-redux-capstone-project-catalogue-os-statistics)
   - [Table of contents](#table-of-contents)
   - [About](#about)
   - [The catalogue](#the-catalogue)
@@ -35,13 +35,13 @@ Repository: https://github.com/phalado/React-Redux-Capstone
 
 For this project I hacked Batman's computer and got some data from the main heroes and villains - you can't be the Batman if you are not prepared for each hero or villain. For my bad luck, after [the Tower of Babel][tower-of-babel] the bat made it difficult to get data, so I wasn't able to get the character's powers and weaknesses, but I was able to get their name, identity, filiations, a photo and some stats that I converted to a power chart using [React SVG Radar Chart][react-radar-chart].
 
-To hide myself from the world's greatest detective I had to use a fake server to store the data. Whe you open the catalogue the React APP downloads the data from the server using an API and stores it in the Redux store.
+To hide from the world's greatest detective I had to use a fake server to store the data. When you open the catalogue the React APP downloads the data from the server using an API and stores it in the Redux store.
 
-The first page showed is just an introdutory page.
+The first page showed is just an introductory page.
 
 ![init-screen][init-screen]
 
-When you click the button will be rendered the Justice League of America's filtered page, showing it's heros. It's an example of the characters filtered by filiation.
+When you click the button will be rendered the Justice League of America's filtered page, showing it's heroes. It's an example of the characters filtered by filiation.
 
 ![team-screen][team-screen]
 
@@ -49,7 +49,7 @@ When you click the button will be rendered the Justice League of America's filte
 
 ![hero-screen][hero-screen]
 
-Finally, you can click in the button in the header to see the possible filters, beeing possible to filter by alignment - good, bad or neutral - by several teams of heroes or villains or, if you prefer, click in the name of any character to see its data.
+Finally, you can click in the button in the header to see the possible filters, being possible to filter by alignment - good, bad or neutral - by several teams of heroes or villains or, if you prefer, click in the name of any character to see its data.
 
 ![filter-screen][filter-screen]
 
@@ -85,7 +85,7 @@ To create this project I used:
 
 ## Video presentation
 
-*Coming soon*
+https://youtu.be/mFQ1Zvdw2x0
 
 
 ## Contact
@@ -99,7 +99,7 @@ Follow me on [twitter][rapha-twitter],  visit my [Github portfolio][rapha-github
 
 [Microverse][mcvs]
 
-I have no business rights about the characters used in this catalogue. This is only for learning purposes. All character belong to [DC Comics][https://www.dccomics.com/].
+I have no business rights about the characters used in this catalogue. This is only for learning purposes. All character belong to [DC Comics][dc-comics].
 
 
 
@@ -110,6 +110,7 @@ I have no business rights about the characters used in this catalogue. This is o
 [superhero-API]: https://www.superheroapi.com/
 [tower-of-babel]: https://dc.fandom.com/wiki/JLA:_Tower_of_Babel
 [react-radar-chart]: https://www.npmjs.com/package/react-svg-radar-chart
+[dc-comics]: https://www.dccomics.com/
 [mcvs]: https://www.microverse.org/
 [rapha-github]: https://github.com/phalado
 [rapha-twitter]: https://twitter.com/phalado
@@ -123,4 +124,4 @@ I have no business rights about the characters used in this catalogue. This is o
 [hero-screen]: https://raw.githubusercontent.com/phalado/React-Redux-Capstone/catalogue/public/content/hero-screen.png
 
 <!-- Video -->
-[video]: https://www.loom.com/share/50085eb2e29b42129edaa0ce6d59d191
+[video]: https://youtu.be/mFQ1Zvdw2x0

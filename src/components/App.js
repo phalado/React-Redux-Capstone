@@ -4,6 +4,7 @@ import HeroesList from '../containers/HeroesList';
 import HeroFile from './HeroFile';
 import TeamsList from '../containers/TeamsList';
 import './App.css';
+import About from './About';
 
 class App extends React.Component {
   constructor(props) {
@@ -93,6 +94,14 @@ class App extends React.Component {
             filter={filter}
             handleClick={this.clickHandler}
           />
+        </div>
+      );
+    }
+
+    if (render === 'about') {
+      return (
+        <div className="App">
+          <About />
         </div>
       );
     }

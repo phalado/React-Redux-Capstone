@@ -5,8 +5,8 @@ import './Header.css';
 const Header = props => {
   const { filter, changeRender } = props;
 
-  const handleClick = () => {
-    changeRender('teamsList');
+  const handleClick = render => {
+    changeRender(render);
   };
 
   return (
@@ -15,9 +15,16 @@ const Header = props => {
       <button
         type="button"
         className="header-button"
-        onClick={handleClick}
+        onClick={() => handleClick('teamsList')}
       >
         Click here to change filter
+      </button>
+      <button
+        type="button"
+        className="header-button"
+        onClick={() => handleClick('about')}
+      >
+        About this project
       </button>
     </header>
   );
