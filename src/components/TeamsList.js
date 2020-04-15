@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import './TeamsList.css';
 
 const TeamsList = props => {
-  const {
-    chngFilter, changeRender, filter, heroes,
-  } = props;
+  const { chngFilter, filter, heroes } = props;
 
-  const handleClick = (value, render) => {
+  const handleClick = value => {
     chngFilter(value);
-    changeRender(render);
   };
 
   return (
@@ -17,40 +15,46 @@ const TeamsList = props => {
       <h1>Filter subject by alignment:</h1>
       <div className="filtering">
         {filter.alignment.map(value => (
-          <button
-            key={value}
-            type="button"
-            className="filter-value"
-            onClick={() => handleClick([1, value], 'heroesList')}
-          >
-            {value}
-          </button>
+          <Link to="/heroesList" key={value}>
+            <button
+              key={value}
+              type="button"
+              className="filter-value"
+              onClick={() => handleClick([1, value])}
+            >
+              {value}
+            </button>
+          </Link>
         ))}
       </div>
       <h1>Filter subject by filiation:</h1>
       <div className="filtering">
         {filter.filiation.map(value => (
-          <button
-            key={value}
-            type="button"
-            className="filter-value"
-            onClick={() => handleClick([0, value], 'heroesList')}
-          >
-            {value}
-          </button>
+          <Link to="/heroesList" key={value}>
+            <button
+              key={value}
+              type="button"
+              className="filter-value"
+              onClick={() => handleClick([0, value], 'heroesList')}
+            >
+              {value}
+            </button>
+          </Link>
         ))}
       </div>
       <h1>Choose a subject by name:</h1>
       <div className="filtering">
         {heroes.map(hero => (
-          <button
-            key={hero.id}
-            type="button"
-            className="filter-value"
-            onClick={() => handleClick([2, hero.id], 'heroFile')}
-          >
-            {hero.name}
-          </button>
+          <Link to="/heroesList" key={hero.id}>
+            <button
+              key={hero.id}
+              type="button"
+              className="filter-value"
+              onClick={() => handleClick([2, hero.id], 'heroFile')}
+            >
+              {hero.name}
+            </button>
+          </Link>
         ))}
       </div>
     </div>
@@ -59,7 +63,6 @@ const TeamsList = props => {
 
 TeamsList.propTypes = {
   chngFilter: PropTypes.func.isRequired,
-  changeRender: PropTypes.func.isRequired,
   heroes: PropTypes.arrayOf(PropTypes.object).isRequired,
   filter: PropTypes.shape({
     value: PropTypes.arrayOf(PropTypes.oneOfType([

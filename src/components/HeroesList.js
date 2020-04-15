@@ -1,23 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Hero from './Hero';
-import Header from '../containers/Header';
+import Header from './Header';
 import './HeroesList.css';
 
 const HeroesList = props => {
-  const {
-    heroes, filter, chngFilter, changeRender,
-  } = props;
+  const { heroes, filter, chngFilter } = props;
 
-  const handleClick = (value, render) => {
+  const handleClick = value => {
     chngFilter(value);
-    changeRender(render);
   };
 
   if (heroes.length >= 190) {
     return (
       <div>
-        <Header />
+        <Header title={filter.value[1]} />
         <div className="heroes-list">
           {heroes.map(hero => {
             if ((filter.value[0] === 0 && hero.filiation.includes(filter.value[1]))
@@ -44,7 +41,6 @@ HeroesList.propTypes = {
   heroes: PropTypes.arrayOf(PropTypes.object).isRequired,
   filter: PropTypes.objectOf(PropTypes.array).isRequired,
   chngFilter: PropTypes.func.isRequired,
-  changeRender: PropTypes.func.isRequired,
 };
 
 export default HeroesList;

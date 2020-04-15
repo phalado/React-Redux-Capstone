@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Header from '../containers/Header';
+import { Link } from 'react-router-dom';
+import Header from './Header';
 import HeroRadar from './HeroRadar';
 import './HeroFile.css';
 
@@ -16,7 +17,7 @@ const HeroFile = props => {
 
   return (
     <div>
-      <Header />
+      <Header title={name} />
       <div className="hero-file-container">
         <div className="hero-img-container">
           <img src={image} alt={name} className="hero-img" />
@@ -35,12 +36,14 @@ const HeroFile = props => {
               if (filter.filiation.includes(value)) {
                 return (
                   <li key={value}>
-                    <button
-                      type="button"
-                      onClick={() => clickHandler([0, value], 'heroesList')}
-                    >
-                      {value}
-                    </button>
+                    <Link to="/heroesList">
+                      <button
+                        type="button"
+                        onClick={() => clickHandler([0, value])}
+                      >
+                        {value}
+                      </button>
+                    </Link>
                   </li>
                 );
               }

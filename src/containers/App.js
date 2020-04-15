@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { addHero, chngRender, changeFilter } from '../actions/index';
+import { addHero, changeFilter } from '../actions/index';
 import App from '../components/App';
 
 const mapStateToProps = state => ({
@@ -11,9 +11,6 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   addNewHero: hero => {
     dispatch(addHero(hero));
-  },
-  changeRender: value => {
-    dispatch(chngRender(value));
   },
   chngFilter: filter => {
     dispatch(changeFilter(filter));

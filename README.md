@@ -1,28 +1,28 @@
-# React and Redux Capstone Project: Catalogue os Statistics
+# React and Redux Capstone Project: catalog os Statistics
 
 <h1 align="center"><img src="https://raw.githubusercontent.com/phalado/React-Redux-Capstone/catalogue/public/content/welcome.png"></h1>
 
 This is Microverse's final project in React/Redux's course.
 
-In this project, I build a catalogue of DC Comic's main characters using React and Redux.
+In this project, I build a catalog of DC Comic's main characters using React and Redux.
 
 
 ## Table of contents
 
-- [React and Redux Capstone Project: Catalogue os Statistics](#react-and-redux-capstone-project-catalogue-os-statistics)
+- [React and Redux Capstone Project: catalog os Statistics](#react-and-redux-capstone-project-catalog-os-statistics)
   - [Table of contents](#table-of-contents)
   - [About](#about)
-  - [The catalogue](#the-catalogue)
+  - [The catalog](#the-catalog)
     - [How to open](#how-to-open)
     - [Technologies used](#technologies-used)
   - [Video presentation](#video-presentation)
   - [Contact](#contact)
-  - [Acknowledgements](#acknowledgements)
+  - [Acknowledgments](#acknowledgments)
 
 
 ## About
 
-This project's objective was to build a browsable list of items that you can filter and access to the details of one item. The list should be accessed from an API, so I choose the [Superhero API][superhero-API] and filtered it to store only the DC Comic's characters.
+This project's goal was to build a browsable list of items that you can filter and access to the details of one item. The list should be accessed from an API, so I choose the [Superhero API][superhero-API] and filtered it to store only the DC Comic's characters.
 
 The project's assignment can be seen [here][assignment].
 
@@ -31,11 +31,11 @@ Link to a live version [here][live-version].
 Repository: https://github.com/phalado/React-Redux-Capstone
 
 
-## The catalogue
+## The catalog
 
 For this project I hacked Batman's computer and got some data from the main heroes and villains - you can't be the Batman if you are not prepared for each hero or villain. For my bad luck, after [the Tower of Babel][tower-of-babel] the bat made it difficult to get data, so I wasn't able to get the character's powers and weaknesses, but I was able to get their name, identity, filiations, a photo and some stats that I converted to a power chart using [React SVG Radar Chart][react-radar-chart].
 
-To hide from the world's greatest detective I had to use a fake server to store the data. When you open the catalogue the React APP downloads the data from the server using an API and stores it in the Redux store.
+To hide from the world's greatest detective I had to use a fake server to store the data. When you open the catalog the React APP downloads the data from the server using an API and stores it in the Redux store.
 
 The first page showed is just an introductory page.
 
@@ -56,7 +56,7 @@ Finally, you can click in the button in the header to see the possible filters, 
 
 ### How to open
 
-You can open the catalogue online clicking [here][live-version] or locally following these steps:
+You can open the catalog online clicking [here][live-version] or locally following these steps:
 
 * Click on the green button "Clone or Download"
 * Click on Download ZIP
@@ -92,14 +92,14 @@ https://youtu.be/mFQ1Zvdw2x0
 
 Author: Raphael Cordeiro
 
-Follow me on [twitter][rapha-twitter],  visit my [Github portfolio][rapha-github], my [Linkedin][rapha-linkedin] or my [personal portfolio][rapha-personal].
+Follow me on [Twitter][rapha-twitter],  visit my [Github portfolio][rapha-github], my [Linkedin][rapha-linkedin] or my [personal portfolio][rapha-personal].
 
 
-## Acknowledgements
+## Acknowledgments
 
 [Microverse][mcvs]
 
-I have no business rights about the characters used in this catalogue. This is only for learning purposes. All character belong to [DC Comics][dc-comics].
+I have no business rights about the characters used in this catalog. This is only for learning purposes. All characters belong to [DC Comics][dc-comics].
 
 
 

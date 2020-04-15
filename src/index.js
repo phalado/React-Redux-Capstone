@@ -44,7 +44,6 @@ const initialState = {
       'neutral',
     ],
   },
-  render: 'init',
 };
 
 const store = createStore(

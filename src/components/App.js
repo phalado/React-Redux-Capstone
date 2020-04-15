@@ -1,16 +1,21 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import HeroesList from '../containers/HeroesList';
 import HeroFile from './HeroFile';
 import TeamsList from '../containers/TeamsList';
-import './App.css';
+import Home from './Home';
 import About from './About';
+import './App.css';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.handleAddHero = this.handleAddHero.bind(this);
-    this.handleClick = this.handleClick.bind(this);
     this.clickHandler = this.clickHandler.bind(this);
     this.state = {
       heroes: [],
@@ -38,83 +43,46 @@ class App extends React.Component {
     });
   }
 
-  handleClick() {
-    const { changeRender } = this.props;
-    changeRender('heroesList');
-  }
-
-  clickHandler(value, render) {
-    const { chngFilter, changeRender } = this.props;
+  clickHandler(value) {
+    const { chngFilter } = this.props;
     chngFilter(value);
-    changeRender(render);
   }
 
   render() {
-    const { render } = this.props;
-
-    if (render === 'init') {
-      return (
+    const { heroes, filter } = this.props;
+    return (
+      <Router>
         <div className="App">
-          <div id="init">
-            <h1 className="app-title">Welcome to the BatComputer</h1>
-            <button
-              type="submit"
-              onClick={this.handleClick}
-              className="app-button"
-            >
-              Open subjects files
-            </button>
-          </div>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/heroesList">
+              <HeroesList />
+            </Route>
+            <Route path="/teamsList">
+              <TeamsList />
+            </Route>
+            <Route path="/heroFile/:id">
+              <HeroFile
+                hero={heroes.filter(hero => hero.id === filter.value[1])[0]}
+                filter={filter}
+                handleClick={this.clickHandler}
+              />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+          </Switch>
         </div>
-      );
-    }
-
-    if (render === 'heroesList') {
-      return (
-        <div className="App">
-          <HeroesList />
-        </div>
-      );
-    }
-
-    if (render === 'teamsList') {
-      return (
-        <div className="App">
-          <TeamsList />
-        </div>
-      );
-    }
-
-    if (render === 'heroFile') {
-      const { heroes, filter } = this.props;
-      return (
-        <div className="App">
-          <HeroFile
-            hero={heroes.filter(hero => hero.id === filter.value[1])[0]}
-            filter={filter}
-            handleClick={this.clickHandler}
-          />
-        </div>
-      );
-    }
-
-    if (render === 'about') {
-      return (
-        <div className="App">
-          <About />
-        </div>
-      );
-    }
-
-    return null;
+      </Router>
+    );
   }
 }
 
 App.propTypes = {
   addNewHero: PropTypes.func.isRequired,
-  changeRender: PropTypes.func.isRequired,
   chngFilter: PropTypes.func.isRequired,
-  render: PropTypes.string.isRequired,
   heroes: PropTypes.arrayOf(PropTypes.object).isRequired,
   filter: PropTypes.shape({
     value: PropTypes.arrayOf(PropTypes.oneOfType([
