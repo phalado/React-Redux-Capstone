@@ -75,7 +75,11 @@ HeroFile.propTypes = {
     chart: PropTypes.objectOf(PropTypes.string),
     filiation: PropTypes.arrayOf(PropTypes.string),
     alignment: PropTypes.string,
-  }).isRequired,
+  }),
+};
+
+HeroFile.defaultProps = {
+  hero: null,
 };
 
 export default HeroFile;

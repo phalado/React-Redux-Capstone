@@ -35,7 +35,7 @@ const TeamsList = props => {
               key={value}
               type="button"
               className="filter-value"
-              onClick={() => handleClick([0, value], 'heroesList')}
+              onClick={() => handleClick([0, value])}
             >
               {value}
             </button>
@@ -45,12 +45,12 @@ const TeamsList = props => {
       <h1>Choose a subject by name:</h1>
       <div className="filtering">
         {heroes.map(hero => (
-          <Link to="/heroesList" key={hero.id}>
+          <Link to={`/herofile/${hero.id}`} key={hero.id}>
             <button
               key={hero.id}
               type="button"
               className="filter-value"
-              onClick={() => handleClick([2, hero.id], 'heroFile')}
+              onClick={() => handleClick([2, hero.id])}
             >
               {hero.name}
             </button>
