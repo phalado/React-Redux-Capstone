@@ -33,7 +33,13 @@ const HeroesList = props => {
     );
   }
   return (
-    <div className="heroes-list" />
+    <div className="heroes-list">
+      <div>
+        <h1 className="fetchingH1">Fetching data</h1>
+        <img src="./content/fetching.gif" alt="Fetching" className="fetch-image" />
+        <h2 className="fetchingH2">Please wait</h2>
+      </div>
+    </div>
   );
 };
 

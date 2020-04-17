@@ -32,6 +32,8 @@ const App = props => {
 
     const loadHeroes = async () => {
       const response = await axios.get('https://superheroapi.com/api.php/2602016920125978/search/_');
+      console.log(response);
+      
 
       if (mounted) {
         setHeros({

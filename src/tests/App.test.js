@@ -82,7 +82,6 @@ describe('Render the "TeamsList" page, click on a hero and then click on a team'
   });
 
   initialState.heroes.forEach(hero => {
-    // const hero = initialState.heroes[2];
     it(`Clicks on ${hero.name}'s button and render the "HeroesFile" page`, () => {
       const { container } = render(<App />);
       fireEvent.click(screen.getByTestId('home-button'));
@@ -97,10 +96,3 @@ describe('Render the "TeamsList" page, click on a hero and then click on a team'
     });
   });
 });
-
-// test('Bad page', () => {
-//   const { container } = renderWithRouter(<App />, {
-//     route: '/no-route',
-//   });
-//   expect(container.innerHTML).toMatch('No match');
-// });
