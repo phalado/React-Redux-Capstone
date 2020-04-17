@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Render the page correctly Render correctly 1`] = `
 <DocumentFragment>
   <div
     class="App"
+    data-testid="App"
   >
     <div
       class="App"
@@ -21,6 +22,7 @@ exports[`renders correctly 1`] = `
         >
           <button
             class="app-button"
+            data-testid="home-button"
             type="submit"
           >
             Open subjects files

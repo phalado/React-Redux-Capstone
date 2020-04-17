@@ -9,6 +9,7 @@ const Home = () => (
         <button
           type="submit"
           className="app-button"
+          data-testid="home-button"
         >
           Open subjects files
         </button>
