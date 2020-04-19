@@ -1,6 +1,6 @@
 # React and Redux Capstone Project: catalog os Statistics
 
-<h1 align="center"><img src="https://raw.githubusercontent.com/phalado/React-Redux-Capstone/catalogue/public/develop/welcome.png"></h1>
+<h1 align="center"><img src="https://raw.githubusercontent.com/phalado/React-Redux-Capstone/develop/public/content/welcome.png"></h1>
 
 This is Microverse's final project in React/Redux's course.
 
