@@ -28,16 +28,35 @@ describe('Open the application, click on the button e redirect to "HeroesList" p
     const { container } = render(<App />);
     fireEvent.click(screen.getByTestId('home-button'));
     expect(container.innerHTML).toContain('heroes-list');
-    expect(container.innerHTML).toContain('Justice League of America');
-    expect(container.innerHTML).not.toContain('Welcome to the BatComputer');
   });
 
-  test('Test if the heroes data is being loaded', () => {
+  test('The rendered page is the "Justice League of America" team page', () => {
     const { container } = render(<App />);
     fireEvent.click(screen.getByTestId('home-button'));
     expect(container.innerHTML).toContain('Justice League of America');
+  });
+
+  test('This is not the home page anymore', () => {
+    const { container } = render(<App />);
+    fireEvent.click(screen.getByTestId('home-button'));
+    expect(container.innerHTML).not.toContain('Welcome to the BatComputer');
+  });
+
+  test('Test if the heroes data is being loaded - Superman', () => {
+    const { container } = render(<App />);
+    fireEvent.click(screen.getByTestId('home-button'));
     expect(container.innerHTML).toContain('<h2 class="hero-name">Superman</h2>');
+  });
+
+  test('Test if the heroes data is being loaded - Wonder Woman', () => {
+    const { container } = render(<App />);
+    fireEvent.click(screen.getByTestId('home-button'));
     expect(container.innerHTML).toContain('<h2 class="hero-name">Wonder Woman</h2>');
+  });
+
+  test('Test if the heroes data is being loaded - Batman', () => {
+    const { container } = render(<App />);
+    fireEvent.click(screen.getByTestId('home-button'));
     expect(container.innerHTML).toContain('<h2 class="hero-name">Batman</h2>');
   });
 });
@@ -54,44 +73,97 @@ describe('Render the "HeroesList" page and click on the header`s buttons', () =>
     fireEvent.click(screen.getByTestId('home-button'));
     fireEvent.click(screen.getByText('About this project'));
     expect(container.innerHTML).toContain('<h1 class="about-title">About</h1>');
+  });
+
+  it('The About page does not have the home page title', () => {
+    const { container } = render(<App />);
+    fireEvent.click(screen.getByTestId('home-button'));
+    fireEvent.click(screen.getByText('About this project'));
     expect(container.innerHTML).not.toContain('Welcome to the BatComputer');
+  });
+
+  it('The about page is not a team page', () => {
+    const { container } = render(<App />);
+    fireEvent.click(screen.getByTestId('home-button'));
+    fireEvent.click(screen.getByText('About this project'));
     expect(container.innerHTML).not.toContain('Justice League of America');
   });
 
-  it('Renders the "TeamsList" page', () => {
+  it('Renders the "TeamsList" page and check the first title', () => {
     const { container } = render(<App />);
     fireEvent.click(screen.getByTestId('home-button'));
     fireEvent.click(screen.getByText('Click here to change filter'));
     expect(container.innerHTML).toContain('<h1>Filter subject by alignment:</h1>');
+  });
+
+  it('Renders the "TeamsList" page and check the second title', () => {
+    const { container } = render(<App />);
+    fireEvent.click(screen.getByTestId('home-button'));
+    fireEvent.click(screen.getByText('Click here to change filter'));
     expect(container.innerHTML).toContain('<h1>Filter subject by filiation:</h1>');
+  });
+
+  it('Renders the "TeamsList" page and check the third title', () => {
+    const { container } = render(<App />);
+    fireEvent.click(screen.getByTestId('home-button'));
+    fireEvent.click(screen.getByText('Click here to change filter'));
     expect(container.innerHTML).toContain('<h1>Choose a subject by name:</h1>');
+  });
+
+  it('Renders the "TeamsList" page and check for a heroe button', () => {
+    const { container } = render(<App />);
+    fireEvent.click(screen.getByTestId('home-button'));
+    fireEvent.click(screen.getByText('Click here to change filter'));
     expect(container.innerHTML).toContain('Superman');
-    expect(container.innerHTML).toContain('Batman');
-    expect(container.innerHTML).toContain('Wonder Woman');
+  });
+
+  it('The TeamsList page is not the home page', () => {
+    const { container } = render(<App />);
+    fireEvent.click(screen.getByTestId('home-button'));
+    fireEvent.click(screen.getByText('Click here to change filter'));
     expect(container.innerHTML).not.toContain('Welcome to the BatComputer');
   });
 });
 
 describe('Render the "TeamsList" page, click on a hero and then click on a team', () => {
-  it('Renders the page and clisk on a header button to render the "TeamsList" page', () => {
-    const { container } = render(<App />);
-    fireEvent.click(screen.getByTestId('home-button'));
-    fireEvent.click(screen.getByText('Click here to change filter'));
-    expect(container.innerHTML).toContain('<h1>Choose a subject by name:</h1>');
-    expect(container.innerHTML).not.toContain('Welcome to the BatComputer');
-  });
-
   initialState.heroes.forEach(hero => {
     it(`Clicks on ${hero.name}'s button and render the "HeroesFile" page`, () => {
       const { container } = render(<App />);
       fireEvent.click(screen.getByTestId('home-button'));
       fireEvent.click(screen.getByText('Click here to change filter'));
-      expect(container.innerHTML).toContain(hero.name);
       fireEvent.click(screen.getByText(hero.name));
       expect(container.innerHTML).not.toContain('<h1>Choose a subject by name:</h1>');
+    });
+
+    it('Check for the hero`s name', () => {
+      const { container } = render(<App />);
+      fireEvent.click(screen.getByTestId('home-button'));
+      fireEvent.click(screen.getByText('Click here to change filter'));
+      fireEvent.click(screen.getByText(hero.name));
       expect(container.innerHTML).toContain(hero.name);
+    });
+
+    it('Check for the hero`s identity', () => {
+      const { container } = render(<App />);
+      fireEvent.click(screen.getByTestId('home-button'));
+      fireEvent.click(screen.getByText('Click here to change filter'));
+      fireEvent.click(screen.getByText(hero.name));
       expect(container.innerHTML).toContain(hero.identity);
+    });
+
+    it('Check for the hero`s alignment', () => {
+      const { container } = render(<App />);
+      fireEvent.click(screen.getByTestId('home-button'));
+      fireEvent.click(screen.getByText('Click here to change filter'));
+      fireEvent.click(screen.getByText(hero.name));
       expect(container.innerHTML).toContain(hero.alignment);
+    });
+
+    it('Check for the hero`s filiation', () => {
+      const { container } = render(<App />);
+      fireEvent.click(screen.getByTestId('home-button'));
+      fireEvent.click(screen.getByText('Click here to change filter'));
+      fireEvent.click(screen.getByText(hero.name));
       expect(container.innerHTML).toContain(hero.filiation[0]);
     });
   });
