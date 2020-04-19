@@ -1,6 +1,6 @@
 # React and Redux Capstone Project: catalog os Statistics
 
-<h1 align="center"><img src="https://raw.githubusercontent.com/phalado/React-Redux-Capstone/catalogue/public/content/welcome.png"></h1>
+<h1 align="center"><img src="https://raw.githubusercontent.com/phalado/React-Redux-Capstone/catalogue/public/develop/welcome.png"></h1>
 
 This is Microverse's final project in React/Redux's course.
 
@@ -118,10 +118,10 @@ I have no business rights about the characters used in this catalog. This is onl
 [rapha-personal]: https://phalado.github.io/
 
 <!-- Images -->
-[init-screen]: https://raw.githubusercontent.com/phalado/React-Redux-Capstone/catalogue/public/content/init-screen.png
-[team-screen]: https://raw.githubusercontent.com/phalado/React-Redux-Capstone/catalogue/public/content/team-screen.png
-[filter-screen]: https://raw.githubusercontent.com/phalado/React-Redux-Capstone/catalogue/public/content/filter-screen.png
-[hero-screen]: https://raw.githubusercontent.com/phalado/React-Redux-Capstone/catalogue/public/content/hero-screen.png
+[init-screen]: https://raw.githubusercontent.com/phalado/React-Redux-Capstone/develop/public/content/init-screen.png
+[team-screen]: https://raw.githubusercontent.com/phalado/React-Redux-Capstone/develop/public/content/team-screen.png
+[filter-screen]: https://raw.githubusercontent.com/phalado/React-Redux-Capstone/develop/public/content/filter-screen.png
+[hero-screen]: https://raw.githubusercontent.com/phalado/React-Redux-Capstone/develop/public/content/hero-screen.png
 
 <!-- Video -->
 [video]: https://youtu.be/mFQ1Zvdw2x0
