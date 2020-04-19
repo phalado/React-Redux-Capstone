@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'batfont';
+  src: url(../content/batmfa.ttf);
+}
+
+html {
+  background-image: url(../content/batman-symbol.png);
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-position-y: 10%;
+  background-position-x: 50%;
+  font-family: 'batfont';
+}
+
+body {
+  position: absolute;
+  width: 94%;
+  height: 70%;
+  margin: 6% 3%;
+  background-color: white;
+  border-radius: 20px;
+  border: ridge;
+}
+
+@media (max-width: 1500px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1300px) {
+  :root {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 1000px) {
+  :root {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 800px) {
+  :root {
+    font-size: 7px;
+  }
+}

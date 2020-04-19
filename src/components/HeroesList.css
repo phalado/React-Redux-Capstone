@@ -1,0 +1,18 @@
+.heroes-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fetch-image {
+  width: 30rem;
+  height: 20rem;
+}
+
+.fetchingH1 {
+  font-size: 3rem;
+}
+
+.fetchingH1 {
+  font-size: 2.5rem;
+}

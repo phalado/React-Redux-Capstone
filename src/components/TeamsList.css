@@ -1,0 +1,26 @@
+.filtering {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.filter-value {
+  border: none;
+  background: none;
+  font-family: 'batfont';
+  font-size: 1rem;
+  width: 12.5rem;
+  height: 3rem;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  margin: 0.5rem;
+}
+
+@media (max-width: 800px) {
+  .filter-value {
+  font-size: 2rem;
+  width: 25rem;
+  height: 6rem;
+  }
+}
