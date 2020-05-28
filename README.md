@@ -16,6 +16,7 @@ In this project, I build a catalog of DC Comic's main characters using React and
     - [How to open](#how-to-open)
     - [Technologies used](#technologies-used)
   - [Video presentation](#video-presentation)
+  - [Future work](#future-work)
   - [Contact](#contact)
   - [Acknowledgments](#acknowledgments)
 
@@ -88,6 +89,13 @@ To create this project I used:
 https://youtu.be/mFQ1Zvdw2x0
 
 
+## Future work
+
+* Mobile version with React Native
+* Possibility to pin your favourite Heroes/Villains
+* Add more data about the characters
+
+
 ## Contact
 
 Author: Raphael Cordeiro
@@ -115,7 +123,7 @@ I have no business rights about the characters used in this catalog. This is onl
 [rapha-github]: https://github.com/phalado
 [rapha-twitter]: https://twitter.com/phalado
 [rapha-linkedin]: https://www.linkedin.com/in/raphael-cordeiro/
-[rapha-personal]: https://phalado.github.io/
+[rapha-personal]: https://www.phalado.tech/
 
 <!-- Images -->
 [init-screen]: https://raw.githubusercontent.com/phalado/React-Redux-Capstone/develop/public/content/init-screen.png
